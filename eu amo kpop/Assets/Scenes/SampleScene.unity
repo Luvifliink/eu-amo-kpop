@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 16425215}
   - component: {fileID: 16425214}
   - component: {fileID: 16425216}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bricks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1308,7 +1308,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
-  JumpForce: 0
+  JumpForce: 10
+  isJumping: 0
+  doubleJump: 0
 --- !u!50 &153153394
 Rigidbody2D:
   serializedVersion: 4
@@ -9107,7 +9109,7 @@ GameObject:
   - component: {fileID: 1281161770}
   - component: {fileID: 1281161769}
   - component: {fileID: 1281161768}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
