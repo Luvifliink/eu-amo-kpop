@@ -24,8 +24,13 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
+        
         Jump();
+    }
+
+    private void FixedUpdate()
+    {
+        Move();
     }
 
     void Move()
@@ -66,7 +71,7 @@ public class Player : MonoBehaviour
             {
                 if (doubleJump)
                 {
-                    rig.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
+                    rig.velocity = Vector2.up * JumpForce;
                     doubleJump = false;
                     anim.SetBool("Jump", false);
                 }
@@ -80,6 +85,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.layer == 8)
         {
             isJumping = false;
+            anim.SetBool("Jump", false);
         } 
     }
     
