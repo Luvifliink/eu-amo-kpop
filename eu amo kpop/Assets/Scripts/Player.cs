@@ -91,6 +91,9 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "Spike")
         {
             Debug.Log("tocou o espinho");
+            
+            GameController.instance.ShowGameOver();
+            Destroy(gameObject);
         } 
     }
     

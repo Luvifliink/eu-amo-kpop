@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
     public int totalScore;
     public TMP_Text scoreText;
+
+    public GameObject gameOver;
 
     public static GameController instance;
 
@@ -19,6 +22,16 @@ public class GameController : MonoBehaviour
     public void UpdateScoretext()
     {
         scoreText.text = totalScore.ToString();
+    }
+
+    public void ShowGameOver()
+    {
+        gameOver.SetActive(true);
+    }
+
+    public void RestartGame(string lvlName)
+    {
+        SceneManager.LoadScene("Lvl_2");
     }
 }
 
